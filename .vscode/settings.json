@@ -1,0 +1,49 @@
+{
+  // prefer absolute imports, i.e #app/* rather than relative
+  "js/ts.preferences.importModuleSpecifier": "non-relative",
+
+  // formatting
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.codeActionsOnSave": {
+    "source.format.oxc": "always", // run formatter first
+    "source.fixAll.oxc": "always" // run lint fixes after
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+
+  // exlude pnpm-lock, routeTree.gen.ts, realwolrd submodule and gitignore'd files
+  // from searches and mark all as readonly
+  "search.useIgnoreFiles": true,
+  "search.exclude": {
+    "pnpm-lock.yaml": true,
+    "src/lib/router/routeTree.gen.ts": true,
+    "realworld/**": true
+  },
+  "files.watcherExclude": {
+    "pnpm-lock.yaml": true,
+    "src/lib/router/routeTree.gen.ts": true,
+    "realworld/**": true
+  },
+  "files.readonlyInclude": {
+    "pnpm-lock.yaml": true,
+    "src/lib/router/routeTree.gen.ts": true,
+    "realworld/**": true
+  }
+}

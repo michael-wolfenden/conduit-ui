@@ -1,0 +1,9 @@
+saveExact: true
+minimumReleaseAge: 0
+peerDependencyRules:
+  allowAny:
+    # @vitejs/plugin-react wants oxc-transform-react ^0.145.0 but > 0.145.0 is installed
+    - oxc-transform-react
+allowBuilds:
+  lefthook: true
+  msw: true
